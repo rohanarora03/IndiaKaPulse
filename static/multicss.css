@@ -1,0 +1,30 @@
+#Form1Layout {
+    font-family: Verdana;
+    font-size: 10pt;
+    margin-top: 10px;
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    width: 390px;
+    height:600px;
+  }
+
+#Form1Layout label {
+  text-align: right;
+  padding-right: 10px;
+  width: 80px;
+}
+
+#Form1Layout input {
+  width: 300px;
+}
+
+#Form1Layout label, #Form1Layout input {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+  }
+
+#Form1Layout br {
+  clear:both;
+}

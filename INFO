@@ -1,0 +1,10 @@
+-> relevant_featurs & sent_similarity files INFO:-
+
+- 0 => using sequenceMatcher w/o eliminating recurring additons into same key
+- 1 => using sequenceMatcher with elimination of recurring additons
+- 2 => using spacy with eliminatin of rcurring additions
+
+=> 'front_end1_new.py' connected with relevant_features4.py , sent_similarity4.py, ext.py, fetchComments.py,
+fetchComments2.py, fetchComments3.py, fetchComments4.py
+
+=> 'front_end.py' connected with fetchComments_old.py, model_result.py, preview.py, model_back.py, relevant_features.py

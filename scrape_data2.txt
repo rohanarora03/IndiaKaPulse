@@ -1,0 +1,1 @@
+{'Pakistan ko maar do. Pura khatam Kar do.': ({'like': 0, 'love': 0, 'haha': 0, 'wow': 0, 'angry': 0, 'sad': 0}, 1)}
