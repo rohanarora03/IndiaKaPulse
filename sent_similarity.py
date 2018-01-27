@@ -62,17 +62,18 @@ class seq_match(object):
             new_percent = neww_dict[i][1] / new_list_total
             summ1 = summ1 + neww_dict[i][1]
             new_percent = new_percent * 100
+            new_percent = float("{0:.2f}".format(new_percent))
             final_dict[i,new_percent] = neww_dict[i][0]
 
-        lisa = []
+        freq_list = []
         for ll in final_dict:
-            lisa.append(ll[1])
-        lisa = sorted(lisa,reverse=True)
+            freq_list.append(ll[1])
+        freq_list = sorted(freq_list,reverse=True)
 
         final = {}
-        for h in lisa:
+        for h in freq_list:
             for b in final_dict:
                 if h == b[1]:
                     final[b] = final_dict[b]
 
-        print(final)
+        return final
