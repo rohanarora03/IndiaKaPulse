@@ -41,7 +41,7 @@ class FlaskIgnite:
         p['iv']=iv
         p['swbh']=swbh
         for i in p:
-            print(p[i])
+            # print(p[i])
             query = p[i].split("/")
             for j in query:
                 if j in l:
@@ -50,10 +50,10 @@ class FlaskIgnite:
                     initial[1]=slash[0]
                     if j!="photos":
                         postid=initial[1]
-                        print(postid)
+                        # print(postid)
                     else:
                         postid=query[6]
-                        print(postid)
+                        # print(postid)
                     z = initial[0]
                     break
             url = 'https://graph.facebook.com/'+query[3]+'?&access_token=EAAB4RjO6UKwBAHDrR1cvIrQV3cJsi5jn3Krp5bjHpf0guiSpiGcFUYzXByZC8rUUKqHetaJk4tIrFqsQlsc5xX0rw4jMD7NDnhUHF6jNbFHc10CyRRnF4faqLq7ItxH2yX0OZCd4OBfKzU9MhGTjU6MKMTLGKvQZAtUTEnIrgZDZD'
@@ -61,11 +61,11 @@ class FlaskIgnite:
             dict=r.json()
 
             pageid=dict['id']
-            print(pageid)
+            # print(pageid)
             tid=pageid+"_"+postid
             id[i]=tid
 
-        print(id)
+        # print(id)
 
         p1 = id['iv'].split("_")
         pgid1 = p1[0]
@@ -88,11 +88,11 @@ class FlaskIgnite:
         fc4.extract(pgid4, pstid4)
 
         ex.extern()
-        re.find_relevant()
-        ss.match()
+        x = re.find_relevant()
+        y = ss.match()
 
-        return "sent"
-        # return render_template("try.html", tfr=x, pre=y)
+        # return "sent"
+        return render_template("try.html", tfr=x, pre=y)
 
     if __name__ == '__main__':
         app.run()
