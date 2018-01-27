@@ -60,10 +60,23 @@ class relevant(object):
             s = s + i[1]
 
         lis = []
+        count = 0
         for j in most_common_final:
             prt = j[1] / s
-            lis.append((j[0], prt * 100))
+            prt = prt * 100
+            prt = float("{0:.2f}".format(prt))
+            lis.append((j[0], prt))
+            count += 1
+            if count > 20:
+                break
 
-        print("Keyword based result:-")
-        print(lis)
-        print(most_common_final)
+        # print("Keyword based result:-")
+        # print(lis)
+        # print(most_common_final)
+
+        final = []
+        for i in lis:
+            for j in most_common_final:
+                if i[0] == j[0]:
+                    final.append((i[0],j[1],i[1]))
+        return final
